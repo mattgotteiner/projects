@@ -18,8 +18,9 @@
             background-color: black;
             border-radius: 50%;
             margin: 5px;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
             animation: move 2s ease-in-out infinite;
+            animation-fill-mode: backwards;
         }
         .dot:nth-child(1) {
             animation-delay: 0s;
@@ -30,6 +31,7 @@
         .dot:nth-child(3) {
             animation-delay: 0.3s;
         }
+        
         @keyframes move {
             0% { transform: translateY(-100px); }
             50% { transform: translateY(100px); }
