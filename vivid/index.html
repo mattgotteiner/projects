@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <nav>
+            <div id="menu-container">
+                <div id="menu" class="hamburger" @click="toggleMenu">
+                    <div class="line" :class="{ open: isOpen }"></div>
+                    <div class="line" :class="{ open: isOpen }"></div>
+                    <div class="line" :class="{ open: isOpen }"></div>
+                </div>
+                <ul class="menu-items" v-if="!isMobile || isOpen">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content" class="text-3xl font-bold underline">
+            Hello World!
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
